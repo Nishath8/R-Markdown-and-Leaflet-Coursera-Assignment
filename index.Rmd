@@ -1,0 +1,36 @@
+---
+title: "My Leaflet Map"
+author: "Nishath Anjum"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    self_contained: true
+---
+
+## Interactive Leaflet Map
+
+This web page was created for the Coursera Peer‑Graded Assignment on **R Markdown and Leaflet**.
+
+Below is an interactive map created using the Leaflet library.
+
+```{r setup, include=FALSE}
+library(leaflet)
+```
+
+### 🗺️ My Leaflet Map
+
+```{r}
+leaflet() %>% 
+  addTiles() %>% 
+  addMarkers(lat = 12.9716, lng = 77.5946,
+             popup = "Bengaluru, India - Sample Marker")
+```
+
+---
+
+### 📌 Submission Notes
+- ✔️ Contains date
+- ✔️ Uses R Markdown
+- ✔️ Includes Leaflet interactive map
+- ✔️ Suitable for GitHub Pages (self-contained)
+
