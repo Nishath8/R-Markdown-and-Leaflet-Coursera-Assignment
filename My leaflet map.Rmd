@@ -1,0 +1,21 @@
+---
+title: "My Leaflet Map"
+author: "Nishath Anjum"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r}
+library(leaflet)
+
+m <- leaflet(width = "100%", height = "500px")
+m <- addTiles(m)
+m <- setView(m, lng = 77.5946, lat = 12.9716, zoom = 10)
+m <- addMarkers(
+m,
+lng = 77.5946,
+lat = 12.9716,
+popup = "Hello from Bangalore!"
+)
+m
+```
